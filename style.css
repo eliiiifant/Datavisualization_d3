@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 70px;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 70px;
+  padding-top: 4px;
+  padding-left: 4px;
+  width: auto;
+  font-weight: normal;
+}
+
+.tooltip {
+  position: absolute;
+  z-index: 10;
+  padding: 4px;
+  font-size: 70px;
+  background-color: white;
+  color: black;
+  font-family: 'Roboto Mono', monospace;
+  line-height: 70px;
+  width: auto;
+}
+
+svg rect:hover {
+  cursor: pointer;
+}
