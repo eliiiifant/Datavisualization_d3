@@ -4,9 +4,6 @@ async function readJson(path) {
   return data;
 }
 
-/**
- *  Gets the maximum value in a collection of numbers.
- */
 function getMax(collection) {
   let max = 0;
 
@@ -62,7 +59,7 @@ async function init() {
 
   const selection = svg.selectAll('rect').data(simplifiedData).enter();
 
-  //blau
+  //blau annual
   selection
     .append('rect') // For each element in the simplifiedData, append a new rectangle.
     .attr('fill', '#0062ff') // Sets the color of the bars.
@@ -82,7 +79,7 @@ async function init() {
       return value.annualMeanTemp * heightScalingFactor;
     })
     .attr('data-city', (value, index) => {
-      return `${value.city}: ${value.annualMeanTemp}°C`;
+      return `${value.city}:${value.annualMeanTemp}°C`;
     })
     .on('mouseover', function () {
       const city = this.dataset.city;
@@ -93,7 +90,7 @@ async function init() {
     })
     ;
 
-  // red
+  // red future
   selection
     .insert('rect') // For each element in the simplifiedData, append a new rectangle.
     .attr('fill', '#fc03be') // Sets the color of the bars.
@@ -113,7 +110,7 @@ async function init() {
       return value.futureAnnualMeanTemp * heightScalingFactor;
     })
     .attr('data-city', (value, index) => {
-      return `${value.city}: ${value.futureAnnualMeanTemp}°C`;
+      return `${value.city}:${value.futureAnnualMeanTemp}°C`;
     })
     .on('mouseover', function () {
       const city = this.dataset.city;
